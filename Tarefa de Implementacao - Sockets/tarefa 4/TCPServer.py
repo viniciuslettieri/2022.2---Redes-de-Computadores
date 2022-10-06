@@ -11,7 +11,6 @@ print("The server is ready to receive")
 while True:
     connectionSocket, addr = serverSocket.accept()
     
-    print("Connection Accepted", addr)
     while True:
         message = connectionSocket.recv(1024)
         
@@ -20,7 +19,6 @@ while True:
 
         print(message.decode())
 
-    print("Connection was Closed", addr)
     connectionSocket.close()
 
 serverSocket.close()
